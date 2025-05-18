@@ -48,4 +48,13 @@
   .nav-link-active {
     @apply font-medium text-indigo-600;
   }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+  }
+
+  .animate-fade-in-out {
+    animation: fadeInOut 2s ease-in-out;
+  }
 }

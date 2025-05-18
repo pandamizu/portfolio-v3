@@ -8,19 +8,19 @@ const ServicesSection = () => {
       title: "3D Product Design",
       icon: <Box className="h-8 w-8 text-indigo-600" />,
       description: "High-quality 3D visualizations for products, packaging, and promotional materials with realistic materials and lighting.",
-      items: ["Product Visualization", "Packaging Design", "Concept Rendering", "3D Animation"]
+      items: ["Product Visualization", "Packaging Design Mockups", "Concept Visualization", "Scene Mockups"]
     },
     {
-      title: "YouTube Shorts Video Editing",
+      title: "Video Editing",
       icon: <VideoIcon className="h-8 w-8 text-indigo-600" />,
-      description: "Engaging, fast-paced video content optimized for YouTube Shorts that captures attention and drives engagement.",
-      items: ["Vertical Video Editing", "Motion Graphics", "Sound Design", "Thumbnail Creation"]
+      description: "Editing services for various types of videos, from short-form content to promotional and social media videos—optimized for engagement and clarity across digital platforms.",
+      items: ["Short-form Video Creation (Reels, Shorts, TikTok)", "Basic & Advanced Editings", "Simple Motion Graphics & Transitions", "Captions & Subtitles" , "Sound Effects & Music Sync" , "Thumbnail Creation"]
     },
     {
-      title: "Instagram Content Design",
+      title: "Graphic Design",
       icon: <Instagram className="h-8 w-8 text-indigo-600" />,
-      description: "Visually cohesive Instagram content that enhances brand identity and increases social media engagement.",
-      items: ["Post Design", "Story Templates", "Carousel Creation", "Profile Optimization"]
+      description: "Versatile graphic design services for both digital and print needs, tailored to enhance visual communication and branding.",
+      items: ["Social Media Posts", "Story Templates", "Promotional Banners", "Invitation Design"]
     }
   ];
 

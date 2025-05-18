@@ -1,9 +1,18 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, Instagram, Twitter, Youtube, Link as LinkIcon, MessageSquare } from 'lucide-react';
+import { Mail, Phone, Instagram, Twitter, Youtube, Link as LinkIcon, MessageSquare, Copy } from 'lucide-react';
+import { useState } from 'react';
 
 const ContactPage = () => {
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const handleCopy = (text: string, type: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(type);
+    setTimeout(() => setCopied(null), 2000);
+  };
+
   return (
-    <div className="min-h-screen pt-12"> {/* Reduced from pt-16 to pt-12 */}
+    <div className="min-h-screen pt-12">
       <div className="relative h-[60vh] flex items-center main-gradient">
         <div className="section-container text-white">
           <motion.div
@@ -31,18 +40,29 @@ const ContactPage = () => {
               <div>
                 <h2 className="text-2xl font-bold mb-6 text-white">Let's Connect</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <a 
-                    href="mailto:pandutirta25@gmail.com"
-                    className="flex items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
-                  >
+                  <div className="flex items-center p-4 bg-white/10 rounded-xl">
                     <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <p className="text-white font-medium">Email</p>
-                      <p className="text-white/70">pandutirta25@gmail.com</p>
+                      <div className="flex items-center justify-between">
+                        <p className="text-white/70">pandutirta25@gmail.com</p>
+                        <button 
+                          onClick={() => handleCopy('pandutirta25@gmail.com', 'email')}
+                          className="ml-2 p-1 rounded hover:bg-white/20 transition-colors"
+                          aria-label="Copy email"
+                        >
+                          <Copy className="h-4 w-4 text-white" />
+                        </button>
+                      </div>
                     </div>
-                  </a>
+                    {copied === 'email' && (
+                      <span className="ml-2 text-xs text-green-400 animate-fade-in-out">
+                        Copied!
+                      </span>
+                    )}
+                  </div>
 
                   <a 
                     href="https://wa.me/6287737783462"
@@ -53,10 +73,28 @@ const ContactPage = () => {
                     <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
                       <MessageSquare className="h-6 w-6 text-white" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <p className="text-white font-medium">WhatsApp</p>
-                      <p className="text-white/70">+62 877-3778-3462</p>
+                      <div className="flex items-center justify-between">
+                        <p className="text-white/70">+62 877-3778-3462</p>
+                        <button 
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleCopy('+6287737783462', 'whatsapp');
+                          }}
+                          className="ml-2 p-1 rounded hover:bg-white/20 transition-colors"
+                          aria-label="Copy phone number"
+                        >
+                          <Copy className="h-4 w-4 text-white" />
+                        </button>
+                      </div>
                     </div>
+                    {copied === 'whatsapp' && (
+                      <span className="ml-2 text-xs text-green-400 animate-fade-in-out">
+                        Copied!
+                      </span>
+                    )}
                   </a>
                 </div>
               </div>

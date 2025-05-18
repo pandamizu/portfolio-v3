@@ -3,34 +3,34 @@ import { Brain, Users, Lightbulb, Clock, Target, Puzzle } from 'lucide-react';
 
 const SkillsSection = () => {
   const hardSkills = [
-    { name: "3D Modeling", level: 90 },
-    { name: "Video Editing", level: 85 },
-    { name: "UI/UX Design", level: 80 },
+    { name: "3D Modeling", level: 80},
+    { name: "Video Editing", level: 90 },
+    { name: "UI/UX Design", level: 75 },
     { name: "Motion Graphics", level: 75 },
-    { name: "Digital Illustration", level: 85 },
-    { name: "Photo Editing", level: 80 }
+    { name: "Digital Illustration", level: 80 },
+    { name: "Photo Editing", level: 85 }
   ];
 
   const softSkills = [
     {
       icon: <Target className="h-6 w-6 text-indigo-600" />,
       name: "Problem Solving",
-      description: "Analytical approach to design challenges with creative solutions"
+      description: "Strong analytical thinking with the ability to solve complex design problems independently and efficiently"
     },
     {
       icon: <Users className="h-6 w-6 text-indigo-600" />,
-      name: "Team Collaboration",
-      description: "Effective communication and coordination in team environments"
+      name: "Reliability",
+      description: "Completes tasks thoroughly and on time with minimal supervision"
     },
     {
       icon: <Clock className="h-6 w-6 text-indigo-600" />,
       name: "Time Management",
-      description: "Efficient project handling and deadline adherence"
+      description: "Effectively manages time to meet deadlines and maintain consistent productivity"
     },
     {
       icon: <Lightbulb className="h-6 w-6 text-indigo-600" />,
       name: "Creativity",
-      description: "Innovative thinking and unique design approaches"
+      description: "Resourceful in using design references and tools to produce visually appealing and effective outputs"
     },
     {
       icon: <Brain className="h-6 w-6 text-indigo-600" />,
@@ -39,8 +39,8 @@ const SkillsSection = () => {
     },
     {
       icon: <Puzzle className="h-6 w-6 text-indigo-600" />,
-      name: "Project Management",
-      description: "Organized approach to handling multiple projects"
+      name: "Self-awareness",
+      description: "Recognizes strengths and weaknesses, actively seeks feedback, and reflects to improve performance"
     }
   ];
 

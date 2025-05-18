@@ -16,12 +16,12 @@ const AboutSection = () => {
     {
       name: "UI/UX Design",
       icon: <Layout className="h-6 w-6 text-indigo-600" />,
-      description: "Designing intuitive interfaces that enhance user experience."
+      description: "Designing visually appealing interfaces using AI-assisted tools."
     },
     {
-      name: "Digital Illustration",
+      name: "Graphic Design",
       icon: <PenTool className="h-6 w-6 text-indigo-600" />,
-      description: "Creating unique digital artwork and illustrations for various projects."
+      description: "Creating compelling graphics for digital and social media platforms."
     }
   ];
   
@@ -40,20 +40,19 @@ const AboutSection = () => {
               About Me
             </span>
             <h2 className="mt-2 text-3xl md:text-4xl font-bold mb-6">
-              Creating digital experiences that stand out
+              Bringing creative ideas to life digitally
             </h2>
             <p className="text-gray-600 mb-6 text-lg">
-              I'm a multidisciplinary designer with expertise in 3D product design, video editing, and UI/UX design. 
-              My approach combines technical precision with creative vision to deliver compelling visual stories and 
-              experiences that resonate with audiences.
+              I’m a multidisciplinary designer focusing on 3D product modeling, video editing, and graphic design. 
+              MI combine creativity and technical skills to produce engaging visual content that connects with audiences.
             </p>
             <p className="text-gray-600 mb-6">
-              I work with industry-standard tools including Blender for 3D modeling and animation, Adobe Premiere Pro 
-              for video editing, Adobe Illustrator for vector graphics, and Adobe Photoshop for image editing and compositing.
+              I work with industry-standard tools like Blender for 3D modeling and animation, Adobe Premiere Pro
+							for video editing, Adobe Illustrator for graphic design, and Adobe Photoshop for image editing.
             </p>
             <p className="text-gray-600">
-              My design philosophy centers on creating meaningful connections between brands and their audiences through 
-              thoughtful, visually striking, and purposeful design.
+              My design approach is about crafting clear, attractive visuals, especially for social media and
+							digital platforms, leveraging inspiration from various sources including AI and online references.
             </p>
           </motion.div>
           
